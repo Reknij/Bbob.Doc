@@ -1,0 +1,16 @@
+{
+  "theme": "documents",
+  "author": "Jinker",
+  "description": "Here is document about Bbob",
+  "about": "Bbob is serverless blog framework write in C#.",
+  "blogName": "Bbob - documents",
+  "blogCountOneTime": 3,
+  "allLink": "next",
+  "recursion": true,
+  "publicPath": "/Bbob.Doc",
+  "buildInPlugins": [
+    "BuildWebArticleJson",
+    "MarkdownParser",
+    "SortData"
+  ]
+}

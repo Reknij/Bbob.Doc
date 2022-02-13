@@ -1,0 +1,27 @@
+{
+    "articles": [
+        "installation",
+        "introduction",
+        "quickStart",
+        "writeBlog",
+        "generateBlog",
+        "configuration",
+
+        "metaTutorial",
+        "moreMeta",
+
+        "Theme development",
+        "JS api",
+
+        "pluginIntroduction",
+        "pluginHelper",
+        "pluginBuildIn",
+        "pluginDevelopment"
+    ],
+    "categories": [
+        "Basic",
+        "Meta",
+        "Theme",
+        "Plugin"
+    ]
+}
