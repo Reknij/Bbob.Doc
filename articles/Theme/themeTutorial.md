@@ -65,8 +65,8 @@ console.log("my png file path: B{publicPath}png/hey.png");
 console.log("my png file path: /sub/png/hey.png")
 ```
 
-# default theme and document theme
-Bbob have two theme build-in. If you blog root url no the '/', please go to project them, clone it and change base in the vite.config.ts. Because them make with vue, can't change the publicPath after build.
+# default theme
+If you blog root url no the '/', please go to project default theme, clone it and change base in the vite.config.ts. Because them make with vue, can't change the publicPath after build.
 
 # Notification
 Generate command will auto insert bbob.js to your index.html. If you index.html file is no call `index.html`, modify your `theme.json`:
