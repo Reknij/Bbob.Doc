@@ -48,7 +48,11 @@ It will generate the blog to the `dist` folder in the current path of Bbob. If y
 
 Now, you can use the any static file server tool to see you blog.
 
-<b>Bbob does not currently support to preview you blog.</b>
+<b>Bbob does not currently support to preview you blog. You can install anywhere to preview</b>
+```
+npm install -g anywhere
+anywhere 1234 //start it with port 1234
+```
 
 The command `g` is alias for `generate`. So, type the full command is:
 ```
