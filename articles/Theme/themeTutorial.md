@@ -56,15 +56,6 @@ Run generate:
 ./Bbob.exe g
 ```
 
-# publicPath of theme
-If want get publicPath value, please in js file write "B{publicPath}", Bbob cli will replace it will value publicPath. Value publicPath is end with '/'.
-```
-// publicPath is /sub/
-console.log("my png file path: B{publicPath}png/hey.png");
-//replace to
-console.log("my png file path: /sub/png/hey.png")
-```
-
 # default theme
 If you blog root url no the '/', please go to project default theme, clone it and change base in the vite.config.ts. Because them make with vue, can't change the publicPath after build.
 

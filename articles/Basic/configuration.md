@@ -89,6 +89,13 @@ Articles path like:
 ```
 Bbob will read path 1 and 2 only if value false. If value true will read all path.
 
+## Public path
+Change base url website of blog.
+```
+"publicPath": "/newPath"
+```
+browse example: 'www.baseurl.com/newPath'.
+
 ## Build-in plugins
 Enabled build-in plugins and sort order
 ```

@@ -25,3 +25,14 @@ You can change the theme in the config file `config.json` in the current path of
 
 # Change information about blog
 You can change the information in the config. Please see the document config to learn.
+
+# Change base url
+The base url is '/', may be somebody wanne change it. You can change it in the config.publicPath.
+```
+//config.json
+{
+    ...
+    publicPath: '/NewPath'
+    ...
+}
+```
