@@ -5,3 +5,5 @@ Bbob.exe
 themes/
 
 dist/
+
+.deploy_git/

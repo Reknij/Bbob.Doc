@@ -76,3 +76,19 @@ Article with filename without extension `Hello` will first one.
 Tags first element is `tag1`. If have tag no match in array, will let match success tag improve.
 
 Categories will default sort.
+
+## GitDeploy
+Run by `deploy` command. Can deploy your blog with git.
+
+First make the config file to `configs` folder. Name it `GitDeploy.config.json`.
+```
+// ./configs/GitDeploy.config.json
+{
+    "repos": "yourGitRepository",
+    "branch": "yourBranch",
+    "message": "commit message"
+}
+```
+If you ignore 'branch', it will default `main`.
+
+If you ignore 'message', it will default date time of update.
