@@ -3,6 +3,7 @@ title: Theme development
 date: 2022-02-12 23:00:28Z
 categories:
     - Theme
+order: 1
 ---
 # Custom theme
 You can make the theme yourself. Can read the default theme code.

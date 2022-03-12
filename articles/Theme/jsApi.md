@@ -3,6 +3,7 @@ title: JS api
 date: 2022-02-13 11:07:15Z
 categories:
     - Theme
+order: 2
 ---
 # Introduction
 Js Api is the path for the theme to fetch data. Is a global variable in your theme.

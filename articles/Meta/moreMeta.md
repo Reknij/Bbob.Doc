@@ -3,6 +3,7 @@ title: More meta
 date: 2022-02-13 13:37:46Z
 categories:
     - Meta
+order: 2
 ---
 # More meta
 Bbob will read all file extension `.meta.json` from folder `metas` in current path of Bbob. Then save in the object name filename without extension. The object in save in the `Bbob.meta.extra` object.

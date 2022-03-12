@@ -3,6 +3,7 @@ title: Generate blog
 date: 2022-02-12 22:30:40Z
 categories:
     - Basic
+order: 5
 ---
 # Generate
 Run the command
@@ -27,12 +28,36 @@ You can change the theme in the config file `config.json` in the current path of
 You can change the information in the config. Please see the document config to learn.
 
 # Change base url
-The base url is '/', may be somebody wanne change it. You can change it in the config.publicPath.
+The base url is '/', may be somebody wanne change it. You can change it in the config.baseUrl.
 ```
 //config.json
 {
     ...
-    publicPath: '/NewPath'
+    baseUrl: '/NewPath'
     ...
 }
+```
+
+# Deploy
+Run the command generate with option deploy:
+```
+//In window.
+./Bbob.exe g deploy
+```
+Also known as:
+```
+//In window.
+./Bbob.exe g -d
+```
+
+# Preview
+Run the command generate with option preview:
+```
+//In window.
+./Bbob.exe g preview
+```
+Also known as:
+```
+//In window.
+./Bbob.exe g -p
 ```

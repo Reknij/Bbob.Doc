@@ -3,15 +3,15 @@
   "author": "Jinker",
   "description": "Here is document about Bbob",
   "about": "Bbob is serverless blog framework write in C#.",
-  "blogName": "Bbob - documents",
+  "blogName": "Bbob - Documents",
   "blogCountOneTime": 3,
   "allLink": "next",
   "recursion": true,
-  "publicPath": "/Bbob.Doc",
-  "buildInPlugins": [
-    "BuildWebArticleJson",
-    "MarkdownParser",
-    "SortData",
-    "GitDeploy"
-  ]
+  "domain": "https://reknij.github.io",
+  "baseUrl": "/Bbob.Doc/",
+  "previewPort": 3000,
+  "compress": true,
+  "useHashName": true,
+  "distributionPath": "./dist",
+  "pluginsDisable": []
 }

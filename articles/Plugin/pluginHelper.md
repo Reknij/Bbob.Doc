@@ -3,11 +3,12 @@ title: Plugin Helper
 date: 2022-02-13 13:01:54Z
 categories:
     - Plugin
+order: 2
 ---
 # Introduction
 PluginHelper is the most important tool for developing plugins.
 
-## PluginHelper.registerObject()
+## registerObject()
 You can register object via this function.
 ```
 string message = "Hello, World";
@@ -15,7 +16,7 @@ PluginHelper.registerObject("msg", message);
 ```
 Registered object can via `PluginHelper.getRegisteredObject<T>()` to get it.
 
-## PluginHelper.getRegisteredObject<T>()
+## getRegisteredObject<T>()
 You can get object via this function.
 ```
 if (PluginHelper.getRegisteredObject<string>("msg", out string? message) && message != null)
@@ -24,7 +25,7 @@ if (PluginHelper.getRegisteredObject<string>("msg", out string? message) && mess
 }
 ```
 
-## PluginHelper.modifyRegisteredObject<T>()
+## modifyRegisteredObject<T>()
 You can modify object via this function.
 ```
 if (PluginHelper.modifyRegisteredObject<string>("msg", (ref string? message)=>{
@@ -36,7 +37,13 @@ if (PluginHelper.getRegisteredObject<string>("msg", out string? newMessage) && n
 }
 ```
 
-## PluginHelper.getPluginJsonConfig<T>()
+## unregisterObject()
+Unregister target object.
+```
+bool isSuccess = unregisterObject("objectName");    
+```
+
+## getPluginJsonConfig<T>()
 You can modify object via this function.
 ```
 public class Config
@@ -51,8 +58,9 @@ if (PluginHelper.getPluginJsonConfig<Config>("pluginName", out Config? config) &
     }
 }
 ```
+if skip pluginName will use your plugin name.
 
-## PluginHelper.savePluginJsonConfig<T>()
+## savePluginJsonConfig<T>()
 You can modify object via this function.
 ```
 public class Config
@@ -63,27 +71,73 @@ Config config = new Config();
 config.msg = "Hello, World!";
 PluginHelper.savePluginJsonConfig<Config>("pluginName", config);
 ```
+if skip pluginName will use your plugin name.
 
-## Sort functions
-To sort the articles, categories and tags. You can change them with your custom function. They is delegates.
-
-### Sort articles
+## isPluginJsonConfigExists()
+Check config is exists or not. if skip plugin name will use your plugin name.
 ```
-PluginHelper.sortArticles = (LinkInfo article1, LinkInfo article2)=>{
-    ...
+bool exists = isPluginJsonConfigExists("PluginName");
+```
+
+## registerMeta()
+Register meta through plugin. If skip meta name will use plugin name.
+```
+registerMeta("metaName", objectMeta);
+```
+
+## unregisterMeta()
+Unregister meta. If skip meta name will use plugin name.
+```
+unregisterMeta("metaName")
+```
+
+## getThemeInfo<T>()
+Get current theme info.
+```
+class Info
+{
+    public string? name{get;set;}
 }
+Info info = getThemeInfo<Info>();
 ```
 
-### Sort categories
+## isTargetPluginDone()
+Check plugin is done or not.
 ```
-PluginHelper.sortCategories = (KeyValuePair<string, List<LinkInfo>> category1, KeyValuePair<string, List<LinkInfo>> category2)=>{
-    ...
+bool isDone = isTargetPluginDone("pluginName")
+string[] plugins = new string[]
+{
+    "pluginName1",
+    "pluginName2",
+    "pluginName3"
 }
+bool isAllDone = isTargetPluginDone(plugins)
 ```
 
-### Sort tags
+## isTargetPluginEnable()
+Check plugin enable or disable
 ```
-PluginHelper.sortTags = (KeyValuePair<string, List<LinkInfo>> tag1, KeyValuePair<string, List<LinkInfo>> tag2)=>{
-    ...
-}
+bool isEnable = isTargetPluginEnable("pluginName")
+```
+
+## isTargetPluginEnableAndDone()
+Return true if plugin enable and done.
+```
+bool isEnableDone = isTargetPluginEnableAndDone("pluginName")
+isEnableDone = isTargetPluginEnable("samePluginName") && isTargetPluginDone("samePluginName") //same with these
+```
+
+## BaseDirectory
+Base path of bbob. It is full path.
+
+## CurrentDirectory
+Current path of you running bbob. It is full path.
+
+## DistributionDirectory
+Path of distribution. It is full path.
+
+## ExecutingCommandResult
+Set the result to let Bbob known what operation continue.
+```
+ExecutingCommandResult = new CommandResult("message of operation", CommandOperation.RunMeAgain);
 ```

@@ -3,6 +3,7 @@ title: Configuration
 date: 2022-02-12 22:37:33Z
 categories:
     - Basic
+order: 9
 ---
 # Config.json
 When run the command `init`, it will create the default config to config.json file in the current path of Bbob.
@@ -89,12 +90,42 @@ Articles path like:
 ```
 Bbob will read path 1 and 2 only if value false. If value true will read all path.
 
-## Public path
+## Domain
+Domain name of your blog. Default is empty.
+```
+"domain": ""
+```
+
+## Base path
 Change base url website of blog.
 ```
-"publicPath": "/newPath"
+"baseUrl": "/newPath"
 ```
 browse example: 'www.baseurl.com/newPath'.
+
+## Compress
+Enable or disable bbob compress file or not.
+```
+"compress": true
+```
+
+## Use hash name
+Enable or disable bbob create file name within hash text.
+```
+"useHashName": true
+```
+
+## Distribution path
+Path of distribution. Default `./dist`
+```
+"distributionPath": "./dist"
+```
+
+## Preview port
+You can change preview url port:
+```
+"previewPort": 8888
+```
 
 ## Build-in plugins
 Enabled build-in plugins and sort order
