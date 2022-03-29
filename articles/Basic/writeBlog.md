@@ -1,8 +1,6 @@
 ---
 title: Write the article.
 date: 2022-02-12 21:48:37Z
-categories:
-    - Basic
 order: 4
 ---
 # Change title for your articles

@@ -23,7 +23,7 @@ console.log(Bbob);
 
 In the rest document will use the `Bbob` name to mean ts module.
 
-# Object `Bbob.blog`
+# Object Bbob.blog
 ## Introduction
 This is blog articles, categories, tags and nextFileLinks access place.
 
@@ -71,7 +71,7 @@ for (int i = 0; i < Bbob.blog.nextFileLinks.length; i++){
 ```
 If Bbob `config.allLink` value is `next`, all articles will save in the next file.
 
-# Object `Bbob.meta`
+# Object Bbob.meta
 ## Introduction
 Bbob meta is save in the `Bbob.meta`.
 
@@ -95,7 +95,7 @@ console.log(Bbob.meta.extra.ExtraMeta2.HiMessage)
 ## Introduction
 This is all Bbob provide functions.
 
-## `Bbob.api.nextLinkInfos()`
+## Bbob.api.nextLinkInfos()
 This is function to access the next link infos file. It receive one function. If no more next file links will get false value.
 ```
 Bbob.api.nextLinkInfos((nextLinkArray)=>{
@@ -111,14 +111,17 @@ Bbob.api.nextLinkInfos((nextLinkArray)=>{
 })
 ```
 
-## `Bbob.api.resetNextLinkInfosOffset()`
+## Bbob.api.nextLinkInfosAsync()
+`nextLinkInfos` async version.
+
+## Bbob.api.resetNextLinkInfosOffset()
 `Bbob.api.nextLinkInfos()` have a offset of `Bbob.blog.nextLink` inside. When `offset` value same nextFileLinks.length, nextLinksInfos callback function will receive false value. `Bbob.api.resetNextLinkInfosOffset()` can reset offset.
 ```
 Bbob.api.resetNextLinkInfosOffset() //reset to zero
 Bbob.api.resetNextLinkInfosOffset(3) //reset to three.
 ```
 
-## `Bbob.api.getArticleFromAddress()`
+## Bbob.api.getArticleFromAddress()
 To get the real content of article, must use this function.
 ```
 Bbob.api.getArticleFromAddress(articleAddress, (link)=>{
@@ -127,8 +130,12 @@ Bbob.api.getArticleFromAddress(articleAddress, (link)=>{
 })
 ```
 
-## `Bbob.api.getLinkInfosWithTag()`
-To get all linkInfo with tag.
+## Bbob.api.getArticleFromAddressAsync()
+`getArticleFromAddress` async version.
+
+
+## Bbob.api.getLinkInfosWithAddress()
+To get all linkInfo with address. The address may be `tag`, `category` or `archive`.
 ```
 Bbob.api.getLinkInfosWithTag(tagName, (linkArray)=>{
     if (!linkArray) return;
@@ -143,18 +150,8 @@ Bbob.api.getLinkInfosWithTag(tagName, (linkArray)=>{
 })
 ```
 
-## `Bbob.api.getLinkInfosWithCategories()`
-To get all linkInfo with tag.
-```
-Bbob.api.getLinkInfosWithCategories(categoryName, (linkArray)=>{
-    if (!linkArray) return;
-    for (int i = 0; i < linkArray.length; i++){
-        let link = linkArray[i];
-        console.log(`title: ${link.title}`)
-        console.log(`date: ${link.date}`)
-        console.log(`categories: ${link.categories}`)
-        console.log(`tags: ${link.tags}`)
-        console.log(`address: ${link.address}`)
-    }
-})
-```
+## Bbob.api.getLinkInfosWithAddressAsync()
+`getLinkInfosWithAddress` async version.
+
+## executeScriptElements()
+To execute all script element of target element. It is use for execute when ajax get article and render `contentParsed` to container element.

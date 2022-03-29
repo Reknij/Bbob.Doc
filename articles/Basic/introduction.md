@@ -1,8 +1,6 @@
 ---
 title: Introduction
 date: 2022-02-12 21:37:23Z
-categories:
-    - Basic
 order: 2
 ---
 # What is Bbob
@@ -10,3 +8,6 @@ Bbob is serverless blog framework. It's written in C# with Dotnet 6. Inspiration
 
 # Why make it
 Feel funny. :)
+
+# Document version
+It is corresponds to `Bbob-Cli v1.4+`.

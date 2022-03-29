@@ -19,6 +19,9 @@ Mainly to generate the blog website. Must make sure `config.theme` is exists. It
 ## Command deploy
 Mainly to deploy the blog website. Must generate first.
 
+## CommandComplete
+When target command complete will invoke.
+
 # Plugin Config
 All plugin include build-in plugin, their config is save in `./configs/...`
 ```

@@ -77,8 +77,8 @@ Have build-in type to process distribution.
 ```
 Currently types have `github`.
 
-## SkipIfDraft
-If article file front matter have property 'draft' and value is `True`, generate will skip this file.
+## ArticleStatusDetect
+If article file front matter have property `draft` and value is `True`, generate will skip this file.
 ```
 // ./articles/hello.md
 ---
@@ -87,7 +87,15 @@ draft: true
 ...
 ---
 ```
-In example, generate will skip file `./articles/hello.md`
+If article file front matter have property `important` and value is `True`, generate will stop generation.
+```
+// ./articles/hello.md
+---
+...
+important: true
+...
+---
+```
 
 ## CopyToDist
 If exists directory 'MyFiles' at your current path, generate will copy all files or directory in 'MyFiles' to distribution.
@@ -167,3 +175,15 @@ Config:
 
 ## ArchiveProcess
 Process archive from 'links' object
+
+## ExtraLinks
+Auto register meta `extraLinks`. Will provide `Dictionary<string, object>` in generate `initialize` stage. Other plugin can add link to Dictionary.
+
+## MarkdownStyle
+To let your article have style. Can config:
+```
+// ./configs/MarkdownStyle.config.json
+{
+    "mode": "light" //or dark
+}
+```

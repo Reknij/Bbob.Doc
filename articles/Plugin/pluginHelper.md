@@ -127,11 +127,30 @@ bool isEnableDone = isTargetPluginEnableAndDone("pluginName")
 isEnableDone = isTargetPluginEnable("samePluginName") && isTargetPluginDone("samePluginName") //same with these
 ```
 
+## isTargetPluginLoaded()
+Return true if plugin loaded, otherwise false.
+```
+bool isLoaded = isTargetPluginLoaded("targetPlugin");
+string[] plugins = new string[]
+{
+    "pluginName1",
+    "pluginName2",
+    "pluginName3"
+}
+bool isAllLoaded = isTargetPluginLoaded(plugins);
+```
+
+## ConfigBbob
+Config of Bbob-Cli.
+
 ## BaseDirectory
-Base path of bbob. It is full path.
+Base path of Bbob-Cli. It is full path.
 
 ## CurrentDirectory
-Current path of you running bbob. It is full path.
+Current path of you running Bbob-Cli. It is full path.
+
+## ThemePath
+Path of theme folder.
 
 ## DistributionDirectory
 Path of distribution. It is full path.

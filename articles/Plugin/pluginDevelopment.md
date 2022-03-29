@@ -137,10 +137,13 @@ public void DeployCommand()
 # Command Complete
 If want doing something when command complete:
 ```
-public void CommandComplete(Commands c)
+public Action? CommandComplete(Commands c)
 {
     Console.WriteLine($"{c} complete");
+    return null;
 }
 ```
+Return `Action?` is delegate to do after command done. Eaxmple, `CommandComplete` of `generate` you can't get bbob.js file because is after CommandComplete to generate. If want get bbob.js file, you must get in the delegate function.
+
 ## Notice
 CommandComplete invoke when all plugin invoke.

@@ -1,8 +1,6 @@
 ---
 title: Enable or Disable target plugin
 date: 2022-02-28 13:23:31
-categories:
-    - Basic
 ---
 # Enable plugin
 ```
@@ -14,6 +12,13 @@ categories:
 ```
 // in window.exe
 ./Bbob.exe disable <pluginName>
+```
+
+# Short name
+You can enter short name to `enable` or `disable`:
+```
+bbob enable plugin-hello //bbob-plugin-hello
+bbob disable plugin-sayHi //bbob-plugin-sayHi
 ```
 
 # Direct operation

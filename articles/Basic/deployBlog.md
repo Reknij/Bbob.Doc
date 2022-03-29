@@ -1,22 +1,18 @@
 ---
 title: Deploy Blog
 date: 2022-02-23 14:03:00
-categories:
-    - Basic
 order: 7
 ---
 # Deploy
 You can deploy your blog easy with oneline command:
 ```
-//In window.
-./Bbob.exe d
+bbob d
 ```
 It will deploy with your distribution folder. So, make sure you already generate blog.
 
 You can also run generate command with deploy option:
 ```
-//In window.
-./Bbob.exe g -d
+bbob g -d
 ```
 Deploy command will run with plugins.
 
@@ -38,8 +34,7 @@ First, write repository url in `configs/GitDeploy.config.json`
 
 Run deploy command to see result.
 ```
-//In window.
-./Bbob.exe d
+bbob d
 ```
 
 ### Type

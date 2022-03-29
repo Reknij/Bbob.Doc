@@ -17,6 +17,15 @@ public class MyPlugin: IPlugin
 }
 ```
 It will check 'otherPlugin' is contain and enable or not. If 'otherPlugin' no contain or disable, will no run 'MyPlugin'.
+
+If want check all plugin. Do like this:
+```
+[PluginCondition("*")]
+public class MyPlugin: IPlugin
+{
+    ...
+}
+```
 ## ConditionType
 ### Require
 It is default value. Must require 'otherPlugin'.

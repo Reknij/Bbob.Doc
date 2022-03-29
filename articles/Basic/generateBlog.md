@@ -1,15 +1,12 @@
 ---
 title: Generate blog
 date: 2022-02-12 22:30:40Z
-categories:
-    - Basic
 order: 5
 ---
 # Generate
 Run the command
 ```
-//In window.
-./Bbob.exe g
+bbob g
 ```
 It will generate the blog with target theme. If no modify theme in config, it will use default theme.
 
@@ -42,22 +39,20 @@ The base url is '/', may be somebody wanne change it. You can change it in the c
 Run the command generate with option deploy:
 ```
 //In window.
-./Bbob.exe g deploy
+bbob g deploy
 ```
 Also known as:
 ```
 //In window.
-./Bbob.exe g -d
+bbob g -d
 ```
 
 # Preview
 Run the command generate with option preview:
 ```
-//In window.
-./Bbob.exe g preview
+bbob g preview
 ```
 Also known as:
 ```
-//In window.
-./Bbob.exe g -p
+bbob g -p
 ```

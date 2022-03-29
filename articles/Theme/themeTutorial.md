@@ -14,7 +14,7 @@ Bbob is provide ts module `Bbob.ts` in the folder `JSApi` in current path of Bbo
 
 Copy `Bbob.ts` to your theme website project and import it. If you use ide or any editor have intellisense function, you will see the intellisense working.
 
-### Theme make with vue3+vite
+### Theme make with vue3+vite (Developmemt)
 1. Copy `Bbob.ts` to `src` folder. Import it when use.
 2. Copy the dist content of Bbob generate to the `Public` folder. import script in the `index.html`
     ```

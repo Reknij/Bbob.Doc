@@ -1,9 +1,7 @@
 ---
 title: Configuration
 date: 2022-02-12 22:37:33Z
-categories:
-    - Basic
-order: 9
+order: 11
 ---
 # Config.json
 When run the command `init`, it will create the default config to config.json file in the current path of Bbob.
@@ -127,12 +125,12 @@ You can change preview url port:
 "previewPort": 8888
 ```
 
-## Build-in plugins
-Enabled build-in plugins and sort order
+## Plugins Disable
+Plugins disable list.
 ```
-// Remove SortData build-in plugin. When run generation will no sorting.
-"buildInPlugins": [
-        "BuildWebArticleJson",
-        "MarkdownParser"
+"pluginsDisable ": [
+        "CategoryProcess",
+        "TagProcess"
     ]
 ```
+Will disable build-in plugin `CategoryProcess` and `TagProcess`
