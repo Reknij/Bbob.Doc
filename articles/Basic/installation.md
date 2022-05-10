@@ -1,7 +1,7 @@
 ---
 title: Installation
 date: 2022-02-12 21:46:34Z
-order: 1
+order: 2
 ---
 # Download from Nuget
 Install with global command:

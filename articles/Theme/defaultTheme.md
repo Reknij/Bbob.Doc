@@ -3,6 +3,58 @@ title: Default theme
 date: 2022-03-28 14:04:55
 order: 3
 ---
+# Language
+Default theme is supports multiple languages. Example, change to chinese:
+```
+// ./metas/defaultTheme.meta.json
+{
+    "language": "zh"
+}
+```
+## language-code
+Write the code of your language to meta.
+
+| Code  | Corresponding Language |
+| ----- | ---------------------- |
+| ar    | Arabic                 |
+| de    | German                 |
+| en    | English                |
+| es    | Spanish                |
+| fr    | French                 |
+| ja    | Japanese               |
+| ko    | Korean                 |
+| ko    | Korean                 |
+| ru    | Russian                |
+| zh    | Chinese                |
+| zh-CN | Simplified Chinese     |
+| zh-TW | Traditional Chinese    |
+
+## Notice
+Some languages is translate by google translate. If has some wrong welcome to pull request.
+
+# Avatar
+Set your avatar at your blog.
+```
+// ./metas/defaultTheme.meta.json
+{
+    "avatar": {
+        "source": "https://yourAvatarImageUrl/avatar.png"
+    }
+}
+```
+
+## Type
+Default type is `square`. If you want your avatar is circle, change type to `circle`.
+```
+// ./metas/defaultTheme.meta.json
+{
+    "avatar": {
+        "source": "https://yourAvatarImageUrl/avatar.png"
+        "type": "circle"
+    }
+}
+```
+
 # Mode
 ## Dark
 If you want change to dark mode, please create meta file:

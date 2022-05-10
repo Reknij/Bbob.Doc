@@ -160,3 +160,6 @@ Set the result to let Bbob known what operation continue.
 ```
 ExecutingCommandResult = new CommandResult("message of operation", CommandOperation.RunMeAgain);
 ```
+
+## PluginsLoaded
+Order of plugins loaded.

@@ -14,7 +14,14 @@ Build-in plugins default is no need sort order. It is compatible. But you want o
 # Build-In plugins
 Bbob have build-in plugins to process data.
 ## MarkdownParser
-To parse the .md file and register data to PluginHelper. Will register "markdown", "getYamlObject" and "linkInfo".
+To parse the .md file and register data to PluginHelper. Will register the following objects:
+
+Name                      | Value                      | Stage
+------------------------- | -------------------------- | ------------
+`markdown`                | markdown text.             | `Initialize`
+`article`                 | information about article file. Example, title, date, categories, tags and more.     | `Initialize`
+`markdownPipelineBuilder` | markdown pipeline builder. | `Initialize`
+`article.contentParsed`   | Html of markdown parsed.   | `Parse`
 
 ## BuildWebArticleJson
 To build the article json to the web file.
@@ -23,7 +30,7 @@ Target file will be like:
 ```
 {
     "title": "Hi",
-    "date": "2022-02-13 12:11:00Z",
+    "date": "2022-02-13 12:11:00",
     "categories": [],
     "tags": [],
     "contentParsed": "",
@@ -36,7 +43,7 @@ Can set config in config file `BuildWebArticleJson.config.json`:
     "shortAddress": false
 }
 ```
-if `shortAddress` true, article json file address is short address. And meta.extra.shortAddress have the full address text.
+if `shortAddress` true, article json file address is short address. And `meta.extra.shortAddress` have the full address text.
 ```
 //false
 "address": "/bbob.assests/articles/helloWorld.ed23a19bd.json
@@ -87,12 +94,23 @@ draft: true
 ...
 ---
 ```
+
 If article file front matter have property `important` and value is `True`, generate will stop generation.
 ```
 // ./articles/hello.md
 ---
 ...
 important: true
+...
+---
+```
+
+If article file front matter have property `notice`, will print value `notice` to console. Then, ask user continue generate article or not.
+```
+// ./articles/hello.md
+---
+...
+notice: This article need confirm again.
 ...
 ---
 ```
